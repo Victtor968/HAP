@@ -36,19 +36,36 @@
         <li>Una configurazione attiva di Home Assistant.</li>
         <li>La chiave di autorizzazione (access token) valida per l'accesso ai WebSocket API di Home Assistant.</li>
         <li>Due entità di tipo <code>input_number</code> configurate in Home Assistant:</li>
+        <li>Opzionalmente due entità di tipo <code>sensor</code> configurate in Home Assistant:</li>
     </ul>
     <pre>
-input_number:
-  days:
-    name: Giorni alla pensione
-    min: 0
-    max: 10000
-    step: 1
-  workday_count:
-    name: Giorni lavorativi rimanenti
-    min: 0
-    max: 10000
-    step: 1
+        input_number:
+        workday_count:
+          name: Giorni lavorativi
+          initial: 0
+          min: 0
+          max: 3650
+          step: 1
+          unit_of_measurement: "giorni"
+          icon: mdi:briefcase-clock
+      
+        days:
+          name: Giorni totali
+          initial: 0
+          min: 0
+          max: 3650
+          step: 1
+          unit_of_measurement: "giorni"
+          icon: mdi:calendar
+      template:
+        - sensor:
+            - name: "Giorni lavorativi"
+              state: "{{ states('input_number.workday_count') | int }}"
+              unit_of_measurement: "giorni" # opzionale
+        - sensor:
+            - name: "Giorni totali"
+              state: "{{ states('input_number.days') | int }}"
+              unit_of_measurement: "giorni" # opzionale
     </pre>
     <p>Riavvia Home Assistant dopo aver aggiunto queste entità.</p>
 </body>
