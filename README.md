@@ -39,7 +39,7 @@ Due entità di tipo input_number configurate in Home Assistant
     
 Sezione di codice della pagina html da personalizzare:
 
-        const url = "ws://indirizzo_HA/api/websocket";
+        const url = "ws://indirizzo_HA:8123/api/websocket";
         const authToken = "codice autorizzazine";    
     
 Riavvia Home Assistant dopo aver aggiunto queste entità e personalizzato il codice html.
