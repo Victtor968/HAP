@@ -16,9 +16,7 @@ Istruzioni per Farla Interagire con Home Assistant
 1. Requisiti Prerequisiti:
 Una configurazione attiva di Home Assistant.
 La chiave di autorizzazione (access token) valida per l'accesso ai WebSocket API di Home Assistant.
-Due entità di tipo input_number configurate in Home Assistant:
-Opzionalmente due entità di tipo sensor configurate in Home Assistant:
-Esempio pacchetto Home Assistant:
+Due entità di tipo input_number configurate in Home Assistant
 
         input_number:
         workday_count:
@@ -38,15 +36,6 @@ Esempio pacchetto Home Assistant:
           step: 1
           unit_of_measurement: "giorni"
           icon: mdi:calendar
-      template:
-        - sensor:
-            - name: "Giorni lavorativi"
-              state: "{{ states('input_number.workday_count') | int }}"
-              unit_of_measurement: "giorni" # opzionale
-        - sensor:
-            - name: "Giorni totali"
-              state: "{{ states('input_number.days') | int }}"
-              unit_of_measurement: "giorni" # opzionale
     
 Sezione di codice della pagina html da personalizzare:
 
