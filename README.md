@@ -1,4 +1,4 @@
-Descrizione Generica della Pagina Web
+**Descrizione Generica della Pagina Web**
 Questa pagina web, intitolata “HAP”, è progettata per calcolare e visualizzare:
 
 1. Giorni rimanenti alla pensione:
@@ -14,7 +14,8 @@ I calcoli vengono aggiornati automaticamente in base ai dati immessi dall'utente
 I valori di "Giorni alla pensione" e "Giorni lavorativi rimanenti" vengono inviati automaticamente a Home Assistant tramite WebSocket, aggiornando le entità input_number.days e input_number.workday_count.
 ![Esempio immagine](img/img.jpg)
 
-Istruzioni per Farla Interagire con Home Assistant
+**Istruzioni per Farla Interagire con Home Assistant**
+
 Una configurazione attiva di Home Assistant.
 La chiave di autorizzazione (access token) valida per l'accesso ai WebSocket API di Home Assistant.
 Due entità di tipo input_number configurate in Home Assistant
