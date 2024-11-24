@@ -51,5 +51,8 @@ Sezione di codice della pagina html da personalizzare:
 
         const url = "ws://indirizzo_HA:8123/api/websocket";
         const authToken = "codice autorizzazine";    
-    
+
+Ricordo che la pagina va caricata nella cartella locale di Home Assistant (www) e per la Dashboards il riferimento sarà quindi /local/hap.html.     
+
 Riavvia Home Assistant dopo aver aggiunto queste entità e personalizzato il codice html.
+
