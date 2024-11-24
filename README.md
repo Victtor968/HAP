@@ -12,6 +12,7 @@ Permette all'utente di salvare la data di pensionamento, i giorni di ferie e le 
 I calcoli vengono aggiornati automaticamente in base ai dati immessi dall'utente.
 4. Integrazione con Home Assistant:
 I valori di "Giorni alla pensione" e "Giorni lavorativi rimanenti" vengono inviati automaticamente a Home Assistant tramite WebSocket, aggiornando le entità input_number.days e input_number.workday_count.
+![Esempio immagine](img/img.jpg)
 Istruzioni per Farla Interagire con Home Assistant
 1. Requisiti Prerequisiti:
 Una configurazione attiva di Home Assistant.
