@@ -1,18 +1,25 @@
 **Descrizione Generica della Pagina Web**
 
-Questa pagina web, intitolata “HAP”, è progettata per calcolare e visualizzare:
+Questa pagina web, di cui vedete uno screenshot è intitolata “HAP”. 
+
+![Esempio immagine](img/screenshot.jpg)
+
+L'ho progettata per calcolare:
 
 1. Giorni rimanenti alla pensione:
 Determinati dalla data di pensionamento inserita dall'utente.
 Mostrati dinamicamente nella sezione "Giorni alla pensione".
-2. Giorni lavorativi rimanenti:
+1. Giorni lavorativi rimanenti:
 Calcolati escludendo sabati, domeniche e festività italiane, in base alla data di pensionamento e a eventuali ferie e permessi specificati dall'utente.
 Visualizzati nella sezione "Giorni lavorativi rimanenti".
-3. Interazione dinamica:
+1. Interazione dinamica:
 Permette all'utente di salvare la data di pensionamento, i giorni di ferie e le ore di permesso utilizzando i cookie.
 I calcoli vengono aggiornati automaticamente in base ai dati immessi dall'utente.
-4. Integrazione con Home Assistant:
+1. Integrazione con Home Assistant:
 I valori di "Giorni alla pensione" e "Giorni lavorativi rimanenti" vengono inviati automaticamente a Home Assistant tramite WebSocket, aggiornando le entità input_number.days e input_number.workday_count.
+
+Ad esempio, nell'immagine qui sotto potete vedere le entità input_number.days e input_number.workday_count che poi ho trasformato in sensori per utilizzi futuri.
+
 ![Esempio immagine](img/img.jpg)
 
 **Istruzioni per Farla Interagire con Home Assistant**
